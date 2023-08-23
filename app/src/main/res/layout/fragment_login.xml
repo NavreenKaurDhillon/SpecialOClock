@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -13,11 +14,12 @@
             android:background="@drawable/login_top_layout_bg">
 
             <ImageView
-                android:layout_alignParentStart="true"
-                android:layout_margin="@dimen/_12sdp"
                 android:layout_width="@dimen/_22sdp"
-                android:layout_marginTop="@dimen/_100sdp"
-                android:layout_height="@dimen/_22sdp"/>
+                android:layout_marginTop="@dimen/_75sdp"
+                android:src="@drawable/back_icon"
+                android:layout_height="@dimen/_22sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                app:tint="@color/white" />
 
         <RelativeLayout
             android:layout_width="@dimen/_140sdp"
@@ -38,9 +40,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_120sdp"
+                android:paddingBottom="@dimen/_20sdp"
                 android:background="@drawable/login_bottom_layout_white_bg">
 
                 <LinearLayout
+                    android:id="@+id/tvs"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -72,9 +76,126 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Email"
+                    android:textSize="15sp"
+                    android:layout_marginTop="@dimen/_25sdp"
                     android:fontFamily="@font/poppins_semibold"/>
 
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter Email"
+                        android:padding="@dimen/_12sdp"
+                        android:elevation="@dimen/_4sdp"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:fontFamily="@font/poppins"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:background="@drawable/editext_white_bg"/>
+
+
+                       <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Password"
+                           android:textSize="15sp"
+                           android:layout_marginTop="@dimen/_8sdp"
+                    android:fontFamily="@font/poppins_semibold"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter Password"
+                        android:padding="@dimen/_12sdp"
+                        android:textSize="14sp"
+                        android:elevation="@dimen/_4sdp"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:fontFamily="@font/poppins"
+                        android:background="@drawable/editext_white_bg"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/forgot_password"
+                        android:fontFamily="@font/poppins"
+                        android:textSize="13sp"
+                        android:layout_marginVertical="@dimen/_4sdp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="end"/>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/orange_button_bg"
+                        android:text="Sign In"
+                        android:padding="@dimen/_12sdp"
+                        android:textAllCaps="false"
+                        android:layout_marginVertical="@dimen/_12sdp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textSize="17sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginVertical="@dimen/_4sdp"
+                        android:fontFamily="@font/dm_sans"
+                        android:text="Log in with other account"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_marginVertical="@dimen/_6sdp"
+                        android:weightSum="2">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="@dimen/_8sdp"
+                            android:layout_marginHorizontal="@dimen/_5sdp"
+                            android:background="@drawable/fb_blue_bg">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/facebook_letter_logo" />
+
+                        </RelativeLayout><RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                        android:paddingHorizontal="@dimen/_8sdp"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                            android:background="@drawable/google_red_bg">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/google_plus_logo"
+                                android:layout_centerInParent="true"/>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
                 </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/don_t_have_an_account"
+                    android:fontFamily="@font/poppins"
+                    android:textSize="16sp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginVertical="@dimen/_20sdp"
+                    android:textColor="@color/black"
+                    />
 
                 </RelativeLayout>
 

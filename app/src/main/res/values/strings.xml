@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Special O Clock</string>
+    <string name="forgot_password"><p><u>Forgot Password?</u></p>></string>
+    <string name="don_t_have_an_account">Don\'t have an account?<p><u>SIGN UP</u></p></string>
+    <string name="by_creating_an_account_you_have_to_agree_with_our">By creating an account you have to agree with our <p><u>Terms &amp; Conditions</u></p></string>
+    <string name="already_have_an_account">Already have an account? <p><u>SIGN IN</u></p></string>
+    <string name="we_have_sent_a_verification_code_to_your_mobile_number">We have sent a verification code\n to your mobile number.</string>
+    <string name="send_again"><p><u>Send again</u></p></string>
 </resources>

@@ -60,7 +60,7 @@
                     android:layout_toRightOf="@id/line1"
                     android:layout_marginStart="@dimen/_6sdp"
                     android:layout_centerVertical="true"
-                    android:background="@drawable/gray_line"/>
+                    android:background="@drawable/orange_line"/>
                 <View
                     android:id="@+id/line3"
                     android:layout_width="@dimen/_22sdp"
@@ -68,7 +68,7 @@
                     android:layout_marginStart="@dimen/_6sdp"
                     android:layout_toRightOf="@id/line2"
                     android:layout_centerVertical="true"
-                    android:background="@drawable/orange_line"/>
+                    android:background="@drawable/gray_line"/>
 
                 <RelativeLayout
                     android:id="@+id/nextRL"
