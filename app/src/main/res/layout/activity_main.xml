@@ -1,18 +1,227 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/main_fragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:navGraph="@navigation/nav_graph"
+            app:defaultNavHost="true" />
+
+        <LinearLayout
+            android:id="@+id/bottomLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+<!--            <androidx.cardview.widget.CardView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                app:cardCornerRadius="2dp"-->
+<!--                app:cardElevation="10dp"-->
+<!--                app:cardMaxElevation="20dp">-->
+
+<!--                <View-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="0.3dp"-->
+<!--                    android:elevation ="6dp"-->
+<!--                    android:background="@color/light_gray" />-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:paddingBottom="8dp"-->
+<!--                    android:weightSum="5"-->
+<!--                    android:paddingTop="15dp"-->
+<!--                    android:layout_gravity="bottom"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    >-->
+
+<!--                    <LinearLayout-->
+<!--                        android:id="@+id/flightsLayout"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_alignParentStart="true"-->
+<!--                        android:layout_marginStart="@dimen/_5dp"-->
+<!--                        android:gravity="center"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:paddingStart="8dp">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/flightsIcon"-->
+<!--                            android:layout_width="@dimen/image_icon_size"-->
+<!--                            android:layout_height="@dimen/image_icon_size"-->
+<!--                            android:elevation="@dimen/image_icon_elevation"-->
+<!--                            app:tint="@color/black"-->
+<!--                            android:src="@drawable/flights_icon"/>-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/flightsText"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="@dimen/_3dp"-->
+<!--                            android:elevation="3dp"-->
+<!--                            android:text="@string/flights"-->
+<!--                            style="@style/customTVRegular"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="@dimen/text_size_11" />-->
+
+<!--                    </LinearLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:id="@+id/experiencesLayout"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_centerHorizontal="true"-->
+<!--                        android:layout_marginStart="@dimen/margin_start_from_view"-->
+<!--                        android:gravity="center"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/experienceIcon"-->
+<!--                            android:layout_width="@dimen/image_icon_size"-->
+<!--                            android:layout_height="@dimen/image_icon_size"-->
+<!--                            android:elevation="@dimen/image_icon_elevation"-->
+<!--                            android:src="@drawable/experience_icon"-->
+<!--                            android:alpha="0.5"-->
+<!--                            app:tint="@color/black" />-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/experienceText"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="@dimen/_3dp"-->
+<!--                            android:elevation="3dp"-->
+<!--                            android:text="@string/experience"-->
+<!--                            style="@style/customTVRegular"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:alpha="0.5"-->
+<!--                            android:textSize="@dimen/text_size_11" />-->
+
+<!--                    </LinearLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:id="@+id/eVisaLayout"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_alignParentEnd="true"-->
+<!--                        android:gravity="center"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:paddingEnd="5dp">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/eVisaIcon"-->
+<!--                            android:layout_width="@dimen/image_icon_size"-->
+<!--                            android:layout_height="@dimen/image_icon_size"-->
+<!--                            android:elevation="@dimen/image_icon_elevation"-->
+<!--                            android:src="@drawable/evisa_icon"-->
+<!--                            android:alpha="0.5"-->
+<!--                            app:tint="@color/black" />-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/eVisaText"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="@dimen/_3dp"-->
+<!--                            android:elevation="3dp"-->
+<!--                            android:text="@string/evisa"-->
+<!--                            style="@style/customTVRegular"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:alpha="0.5"-->
+<!--                            android:textSize="@dimen/text_size_11" />-->
+
+<!--                    </LinearLayout>-->
+<!--                    <LinearLayout-->
+<!--                        android:id="@+id/travelEssentialsLayout"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_alignParentEnd="true"-->
+<!--                        android:layout_toEndOf="@id/eVisaLayout"-->
+<!--                        android:gravity="center"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:paddingEnd="5dp">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/travelEssentialsIcon"-->
+<!--                            android:layout_width="@dimen/image_icon_size"-->
+<!--                            android:layout_height="@dimen/image_icon_size"-->
+<!--                            android:elevation="@dimen/image_icon_elevation"-->
+<!--                            android:src="@drawable/travel_essential_icon"-->
+<!--                            android:alpha="0.5"-->
+<!--                            app:tint="@color/black" />-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/travelEssentialsText"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="@dimen/_3dp"-->
+<!--                            android:elevation="3dp"-->
+<!--                            android:text="@string/essential"-->
+<!--                            style="@style/customTVRegular"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:alpha="0.5"-->
+<!--                            android:textSize="@dimen/text_size_11" />-->
+
+<!--                    </LinearLayout>-->
+<!--                    <LinearLayout-->
+<!--                        android:id="@+id/eSimLayout"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_alignParentEnd="true"-->
+<!--                        android:gravity="center"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:paddingEnd="5dp">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/eSimsIcon"-->
+<!--                            android:layout_width="@dimen/image_icon_size"-->
+<!--                            android:layout_height="@dimen/image_icon_size"-->
+<!--                            android:elevation="@dimen/image_icon_elevation"-->
+<!--                            android:src="@drawable/esims_icon"-->
+<!--                            android:alpha="0.5"-->
+<!--                            app:tint="@color/black" />-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/eSimsText"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="@dimen/_3dp"-->
+<!--                            android:elevation="3dp"-->
+<!--                            android:text="@string/esim"-->
+<!--                            style="@style/customTVRegular"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:alpha="0.5"-->
+<!--                            android:textSize="@dimen/text_size_11" />-->
+
+<!--                    </LinearLayout>-->
+
+<!--                </LinearLayout>-->
+
+<!--            </androidx.cardview.widget.CardView>-->
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</layout>

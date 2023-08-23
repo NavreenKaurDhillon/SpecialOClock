@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.specialoclock.ui.fragments.authscreens.SplashFragment"
+        android:label="SplashFragment" >
+        <action
+            android:id="@+id/action_splashFragment_to_tutorialScreen1"
+            app:destination="@id/tutorialScreen1" />
+    </fragment>
+    <fragment
+        android:id="@+id/tutorialScreen1"
+        android:name="com.example.specialoclock.ui.fragments.tutorialscreens.TutorialScreen1"
+        android:label="TutorialScreen1" >
+        <action
+            android:id="@+id/action_tutorialScreen1_to_tutorialScreen2"
+            app:destination="@id/tutorialScreen2" />
+    </fragment>
+    <fragment
+        android:id="@+id/tutorialScreen2"
+        android:name="com.example.specialoclock.ui.fragments.tutorialscreens.TutorialScreen2"
+        android:label="TutorialScreen2" >
+        <action
+            android:id="@+id/action_tutorialScreen2_to_tutorialScreen3"
+            app:destination="@id/tutorialScreen3" />
+    </fragment>
+    <fragment
+        android:id="@+id/tutorialScreen3"
+        android:name="com.example.specialoclock.ui.fragments.tutorialscreens.TutorialScreen3"
+        android:label="TutorialScreen3" />
+</navigation>
